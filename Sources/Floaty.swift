@@ -262,6 +262,13 @@ open class Floaty: UIView {
     /**
      Initialize with default property.
      */
+    public init() {
+        super.init(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        backgroundColor = UIColor.clear
+        setObserver()
+        setAccessibilityView()
+    }
+    
     public init(with colors: [CGColor]? = nil) {
         self.colors = colors
         super.init(frame: CGRect(x: 0, y: 0, width: size, height: size))
