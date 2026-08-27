@@ -785,10 +785,17 @@ open class Floaty: UIView {
     
     fileprivate func setButtonImage() {
         buttonImageView.removeFromSuperview()
-        buttonImageView.frame = circleLayer.frame
         buttonImageView = UIImageView(image: buttonImage)
-//        buttonImageView.contentMode = .top
         buttonImageView.tintColor = plusColor
+        
+        self.addSubview(buttonImageView)
+        
+        buttonImageView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            buttonImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            buttonImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
         
         self.addSubview(buttonImageView)
     }
