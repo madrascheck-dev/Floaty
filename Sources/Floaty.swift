@@ -796,8 +796,6 @@ open class Floaty: UIView {
             buttonImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             buttonImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        
-        self.addSubview(buttonImageView)
     }
     
     fileprivate func setTintLayer() {
